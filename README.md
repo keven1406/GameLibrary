@@ -1,6 +1,6 @@
 # 🎮 GameLibrary - Biblioteca de Jogos em Java
 
-Projeto de uma iblioteca de jogos feito em Java.
+Projeto de uma biblioteca de jogos feita em Java.
 
 ## ⚙️ Funcionalidades
 
@@ -9,7 +9,7 @@ Projeto de uma iblioteca de jogos feito em Java.
 
 ## 📊 Diagrama UML
 
-![Diagrama UML](docs/uml-diagrama.png)
+![Diagrama UML](docs/uml-diagrama-jogo.png)
 
 ## 🧠 Tecnologias
 
