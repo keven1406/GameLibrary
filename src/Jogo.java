@@ -1,13 +1,11 @@
-import java.util.Calendar;
-
 public abstract class Jogo {
     //Atributo
     private String titulo;
     private String genero;
-    private Calendar anoLancamento;
+    private String anoLancamento;
 
     //Metodos
-    public Jogo (String titulo, String genero, Calendar anoLancamento) {
+    public Jogo (String titulo, String genero, String anoLancamento) {
         this.titulo = titulo;
         this.genero = genero;
         this.anoLancamento = anoLancamento;
@@ -17,7 +15,7 @@ public abstract class Jogo {
 
     @Override
     public String toString () {
-        return "Jogo: \nTitulo:"+titulo+",\ngenero: "+genero+",\n anoLancamento: "+anoLancamento+"\n";
+        return "\nJogo: \nTitulo:"+titulo+",\ngenero: "+genero+",\n anoLancamento: "+anoLancamento+"\n";
     }
 
     public String getTitulo() {
@@ -35,10 +33,10 @@ public abstract class Jogo {
         this.genero = genero;
     }
 
-    public Calendar getAnoLancamento() {
+    public String getAnoLancamento() {
         return anoLancamento;
     }
-    public void setAnoLancamento(Calendar anoLancamento) {
+    public void setAnoLancamento(String anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
 

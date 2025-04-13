@@ -1,12 +1,16 @@
 import java.util.Calendar;
 public class JogoFisico extends Jogo implements Jogavel {
     //Atributos
-    int numeroMidias;
+    private int numeroMidias;
 
     //Metodos
-    public JogoFisico (String titulo, String genero, Calendar anoLancamento, int numeroMidias) {
+    public JogoFisico (String titulo, String genero, String anoLancamento, int numeroMidias) {
         super(titulo, genero, anoLancamento);
         this.numeroMidias = numeroMidias;
+    }
+    @Override
+    public String toString () {
+        return "\nJogo: thirulipa \nTitulo:"+getTitulo()+",\ngenero: "+getGenero()+",\nanoLancamento: "+getAnoLancamento()+"\nnumeroMidias: "+ this.numeroMidias;
     }
     @Override
     public void exibirInfo() {
