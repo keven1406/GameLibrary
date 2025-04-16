@@ -17,9 +17,10 @@ public class Main {
         do {
             //MENU
             System.out.println("O que gostaria de fazer primeiro? " +
-                    "\n1 - adicionar um jogo" +
-                    "\n2 - ver biblioteca" +
-                    "\n3 - sair");
+                    "\n1 - Adicionar um jogo" +
+                    "\n2 - Ver biblioteca" +
+                    "\n3 - Iniciar Jogo" +
+                    "\n4 - sair");
 
             //verifica se o numero realmente é um inteiro, se sim, atribui nextInt() a opcao.
             if (sc.hasNextInt()) {
@@ -29,7 +30,7 @@ public class Main {
                 }
                 //ADICIONAR JOGO FISICO OU DIGITAL
                 else if (opcao == 1) {
-                    System.out.println("Você deseja adicionar um jogo de mídia (1) física, (2) digital?");
+                    System.out.println("Você deseja adicionar um jogo de mídia (1) física ou, (2) digital?");
                     if (sc.hasNextInt()) {
                         int fisicoOuDigital = sc.nextInt();
                         if (fisicoOuDigital == 1) {
@@ -94,13 +95,37 @@ public class Main {
                             //Exibindo o estoque
                             System.out.println("Estoque:");
                             for (Map.Entry<String, Integer> entry : estoque.entrySet()) {
-                                System.out.println("Titulo: " + entry.getKey() + ": " + entry.getValue());
+                                System.out.println(entry.getKey() + ": " + entry.getValue());
                             }
                         }
                     } else {
                         System.out.println("Digite uma opção valida!");
                     }
-                } else if (opcao == 3) {
+                }//INICIAR JOGO
+                else if (opcao == 3) {
+                    System.out.println("Deseja iniciar um jogo fisico ou digital? ");
+                    sc.nextLine();
+                    String escolha = sc.nextLine().toLowerCase();
+                    if (escolha.equals("fisico")) {
+                        System.out.println("Digite o nome do jogo:");
+                        String nomeJogo = sc.nextLine().toLowerCase();
+                        for (JogoFisico jogo : listaJogosFisicos) {
+                            if (jogo.getTitulo().equalsIgnoreCase(nomeJogo)) {
+                                jogo.iniciarJogo();
+                            } else { System.out.println("Jogo não encontrado");}
+                        }
+                    } else if (escolha.equals("digital"))  {
+                        System.out.println("Digite o nome do jogo:");
+                        String nomeJogo = sc.nextLine().toLowerCase();
+                        for (JogoDigital jogo : listaJogosDigitais) {
+                            if (jogo.getTitulo().equalsIgnoreCase(nomeJogo)) {
+                                jogo.iniciarJogo();
+                            } else { System.out.println("Jogo não encontrado"); }
+                        }
+                    } else {
+                        System.out.println("Você não digitou corretamente, tente novamente.");
+                    }
+                } else if(opcao == 4) {
                     break;
                 }
             } else {
@@ -108,6 +133,7 @@ public class Main {
             }
             System.out.println("===============");
 
-        } while (opcao != 3);
+        } while (opcao != 4);
     }
+
 }

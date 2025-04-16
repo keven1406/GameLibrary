@@ -15,7 +15,7 @@ public class JogoDigital extends Jogo implements Jogavel {
     }
     @Override
     public void iniciarJogo() {
-        System.out.println("Iniciando jogo digital:");
+        System.out.println("Iniciando jogo digital:" + this.getTitulo());
     }
     @Override
     public void exibirInfo() {

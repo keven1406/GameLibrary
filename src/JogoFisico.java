@@ -18,7 +18,7 @@ public class JogoFisico extends Jogo implements Jogavel {
     }
     @Override
     public void iniciarJogo () {
-        System.out.println("Iniciando jogo Fisico: ");
+        System.out.println("Iniciando jogo Fisico: " + this.getTitulo());
     }
 
     public int getNumeroMidias() {
