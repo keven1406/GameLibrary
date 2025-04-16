@@ -1,4 +1,4 @@
-#GameLibrary - Biblioteca de Jogos em Java
+#<h2>GameLibrary - Biblioteca de Jogos em Java</h1>
 
 
 Projeto de uma biblioteca de jogos feita em Java.
