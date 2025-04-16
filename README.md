@@ -1,19 +1,20 @@
-# 🎮 GameLibrary - Biblioteca de Jogos em Java
+#GameLibrary - Biblioteca de Jogos em Java
 
 Projeto de uma biblioteca de jogos feita em Java.
 
-## ⚙️ Funcionalidades
+#Funcionalidades
 
 - Adicionar jogos
-- Buscar e listar jogos por gênero, nome, etc.
+- Listar jogos.
+- Estoque de jogos
 
-## 📊 Diagrama UML
+#Diagrama UML
 
 ![Diagrama UML](docs/uml-diagrama-jogo.png)
 
-## 🧠 Tecnologias
+#Tecnologias
 
-- Java 17
+- Java
 - Orientação a Objetos
 - Collections Framework
 
