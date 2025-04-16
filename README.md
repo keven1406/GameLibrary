@@ -9,6 +9,8 @@ Projeto em Java para armazenar e visualizar jogos físicos e digitais.
 - Adicionar jogos
 - Listar jogos.
 - Estoque de jogos
+- Verificar Igualdade
+- Iniciar Jogo
 
 
 <h2>Diagrama UML</h2>
