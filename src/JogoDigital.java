@@ -5,13 +5,13 @@ public class JogoDigital extends Jogo implements Jogavel {
     private int tamanhoGB;
 
     //Metodos
-    public JogoDigital (String titulo, String genero, String anoLancamento, int tamanhoGB) {
+    public JogoDigital (String titulo, String genero, Integer anoLancamento, int tamanhoGB) {
         super(titulo, genero, anoLancamento);
         this.tamanhoGB = tamanhoGB;
     }
     @Override
     public String toString () {
-        return "\nJogo: thirulipa \nTitulo:"+getTitulo()+",\ngenero: "+getGenero()+",\nanoLancamento: "+getAnoLancamento()+"\nTamanho em GB: "+ this.tamanhoGB;
+        return "\nJogo: "+getTitulo()+",\ngenero: "+getGenero()+",\nanoLancamento: "+getAnoLancamento()+"\nTamanho em GB: "+ this.tamanhoGB;
     }
     @Override
     public void iniciarJogo() {

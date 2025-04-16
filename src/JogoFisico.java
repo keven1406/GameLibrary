@@ -4,13 +4,13 @@ public class JogoFisico extends Jogo implements Jogavel {
     private int numeroMidias;
 
     //Metodos
-    public JogoFisico (String titulo, String genero, String anoLancamento, int numeroMidias) {
+    public JogoFisico (String titulo, String genero, Integer anoLancamento, int numeroMidias) {
         super(titulo, genero, anoLancamento);
         this.numeroMidias = numeroMidias;
     }
     @Override
     public String toString () {
-        return "\nJogo: thirulipa \nTitulo:"+getTitulo()+",\ngenero: "+getGenero()+",\nanoLancamento: "+getAnoLancamento()+"\nnumeroMidias: "+ this.numeroMidias;
+        return "\nJogo:  \nTitulo:"+getTitulo()+",\ngenero: "+getGenero()+",\nanoLancamento: "+getAnoLancamento()+"\nnumeroMidias: "+ this.numeroMidias;
     }
     @Override
     public void exibirInfo() {

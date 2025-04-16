@@ -8,8 +8,8 @@ public class Main {
         System.out.println("===============");
 
         //Lista com jogos fisicos e digitais.
-        List <JogoFisico> listaJogosFisicos = new ArrayList<>();
-        List <JogoDigital> listaJogosDigitais = new ArrayList<>();
+        List<JogoFisico> listaJogosFisicos = new ArrayList<>();
+        List<JogoDigital> listaJogosDigitais = new ArrayList<>();
 
         //Variável condicional do loop
         int opcao = 0;
@@ -38,29 +38,29 @@ public class Main {
                             String titulo = sc.nextLine();
                             System.out.println("Digite o genero: ");
                             String genero = sc.nextLine();
-                            System.out.println("Digite a data de lancamento no seguinte formato dd/mm/yyyy: ");
-                            String dataLancamento = sc.nextLine();
+                            System.out.println("Digite o ano de lançamento: ");
+                            Integer dataLancamento = sc.nextInt();
                             System.out.println("Quantas mídias ele possui?");
                             int numeroMidias = sc.nextInt();
                             JogoFisico jogo = new JogoFisico(titulo, genero, dataLancamento, numeroMidias);
                             listaJogosFisicos.add(jogo);
                             System.out.println("Jogo adicionado com sucesso!");
-                        }
-                        else if (fisicoOuDigital == 2) {
+                        } else if (fisicoOuDigital == 2) {
                             sc.nextLine();
                             System.out.println("Digite o Titulo: ");
                             String titulo = sc.nextLine();
                             System.out.println("Digite o genero: ");
                             String genero = sc.nextLine();
-                            System.out.println("Digite a data de lancamento no seguinte formato dd/mm/yyyy: ");
-                            String dataLancamento = sc.nextLine();
+                            System.out.println("Digite o ano de lançamento:");
+                            Integer dataLancamento = sc.nextInt();
                             System.out.println("Insira o tamanho em GB:");
                             int tamanhoGB = sc.nextInt();
                             JogoDigital jogo = new JogoDigital(titulo, genero, dataLancamento, tamanhoGB);
                             listaJogosDigitais.add(jogo);
                             System.out.println("Jogo adicionado com sucesso!");
+                        } else {
+                            System.out.println("Você solicitou uma opção inválida!");
                         }
-                        else {System.out.println("Você solicitou uma opção inválida!");}
                     }
                 } else if (opcao == 2) {
                     System.out.println("Gostaria de ver a (1) lista completa ou o (2) estoque?");
@@ -68,14 +68,34 @@ public class Main {
                     if (sc.hasNextInt()) {
                         int op = sc.nextInt();
                         if (op == 1) {
-                            HashSet<JogoDigital> jogosDigitaisSemDuplicata = new HashSet<> (listaJogosDigitais);
-                            HashSet<JogoFisico> jogosFisicosSemDuplicata = new HashSet<> (listaJogosFisicos);
+                            HashSet<JogoDigital> jogosDigitaisSemDuplicata = new HashSet<>(listaJogosDigitais);
+                            HashSet<JogoFisico> jogosFisicosSemDuplicata = new HashSet<>(listaJogosFisicos);
                             System.out.println("===============");
                             System.out.println("Todos os seus jogos Físicos: ");
                             System.out.println(jogosFisicosSemDuplicata);
                             System.out.println("Todos os seus jogos digitais: ");
                             System.out.println(jogosDigitaisSemDuplicata);
                             System.out.println("===============");
+                        } else if (op == 2) {
+                            System.out.println("================");
+                            //Criando o estoque
+                            HashMap<String, Integer> estoque = new HashMap<>();
+
+                            //para cada jogo em listaJogosFisicos
+                            for (JogoFisico jogo : listaJogosFisicos) {
+                                String genero = jogo.getGenero();
+                                estoque.put(genero, estoque.getOrDefault(genero, 0) + 1);
+                            }
+                            //para cada jogo em listaJogosDigitais
+                            for (JogoDigital jogo : listaJogosDigitais) {
+                                String genero = jogo.getGenero();
+                                estoque.put(genero, estoque.getOrDefault(genero, 0) + 1);
+                            }
+                            //Exibindo o estoque
+                            System.out.println("Estoque:");
+                            for (Map.Entry<String, Integer> entry : estoque.entrySet()) {
+                                System.out.println("Titulo: " + entry.getKey() + ": " + entry.getValue());
+                            }
                         }
                     } else {
                         System.out.println("Digite uma opção valida!");
@@ -89,8 +109,5 @@ public class Main {
             System.out.println("===============");
 
         } while (opcao != 3);
-
-
     }
 }
-
