@@ -1,7 +1,7 @@
 <h2>GameLibrary - Biblioteca de Jogos em Java</h1>
 
 
-Projeto de uma biblioteca de jogos feita em Java.
+Projeto em Java para armazenar e visualizar jogos físicos e digitais.
 
 
 <h2>Funcionalidades</h2>
