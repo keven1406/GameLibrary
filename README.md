@@ -1,29 +1,29 @@
-#<h2>GameLibrary - Biblioteca de Jogos em Java</h1>
+<h2>GameLibrary - Biblioteca de Jogos em Java</h1>
 
 
 Projeto de uma biblioteca de jogos feita em Java.
 
 
-#Funcionalidades
+<h2>Funcionalidades</h2>
 
 - Adicionar jogos
 - Listar jogos.
 - Estoque de jogos
 
 
-#Diagrama UML
+<h2>Diagrama UML</h2>
 
 ![Diagrama UML](docs/uml-diagrama-jogo.png)
 
 
-#Tecnologias
+<h2>Tecnologias</h2>
 
 - Java
 - Orientação a Objetos
 - Collections Framework
 
 
-## 🚀 Como executar
+<h2>Como executar</h2>
 
 1. Clone o repositório
 2. Compile com seu IDE favorito ou via terminal
